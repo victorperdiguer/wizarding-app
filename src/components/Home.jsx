@@ -24,7 +24,7 @@ const Home = () => {
     <div className="house-list">
       {houses && houses.map((house, i) => {
         return (
-          <div className="house-card">
+          <div className="house-card" key={house.name}>
             <h2>{house.name}</h2>
             <p>Founded by {house.founder}</p>
             <Link to={`/${house.id}`}>See more</Link>
